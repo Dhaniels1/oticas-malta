@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/oticas-malta/static/css/main.93963bcb.css",
-    "main.js": "/oticas-malta/static/js/main.5d5d9bc6.js",
-    "static/js/453.4adeea48.chunk.js": "/oticas-malta/static/js/453.4adeea48.chunk.js",
-    "index.html": "/oticas-malta/index.html",
-    "main.93963bcb.css.map": "/oticas-malta/static/css/main.93963bcb.css.map",
-    "main.5d5d9bc6.js.map": "/oticas-malta/static/js/main.5d5d9bc6.js.map",
-    "453.4adeea48.chunk.js.map": "/oticas-malta/static/js/453.4adeea48.chunk.js.map"
+    "main.css": "https://dhaniels1.github.io/oticas-malta/static/css/main.93963bcb.css",
+    "main.js": "https://dhaniels1.github.io/oticas-malta/static/js/main.122d3023.js",
+    "static/js/453.4adeea48.chunk.js": "https://dhaniels1.github.io/oticas-malta/static/js/453.4adeea48.chunk.js",
+    "index.html": "https://dhaniels1.github.io/oticas-malta/index.html",
+    "main.93963bcb.css.map": "https://dhaniels1.github.io/oticas-malta/static/css/main.93963bcb.css.map",
+    "main.122d3023.js.map": "https://dhaniels1.github.io/oticas-malta/static/js/main.122d3023.js.map",
+    "453.4adeea48.chunk.js.map": "https://dhaniels1.github.io/oticas-malta/static/js/453.4adeea48.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.93963bcb.css",
-    "static/js/main.5d5d9bc6.js"
+    "static/js/main.122d3023.js"
   ]
 }
