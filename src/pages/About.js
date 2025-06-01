@@ -32,7 +32,7 @@ const About = () => {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-6 md:mb-0 md:pr-6">
               <img 
-                src={`${process.env.PUBLIC_URL}/images/WhatsAppImage2025-06-01at13.36.59.jpg`}
+                src={`${process.env.PUBLIC_URL}/images/equipe.jpg`}
                 alt="Equipe Óticas Malta" 
                 className="rounded-lg shadow-md w-full"
               />
