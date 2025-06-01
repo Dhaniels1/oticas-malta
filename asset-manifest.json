@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a9977da2.css",
-    "main.js": "/static/js/main.7a49028e.js",
+    "main.js": "/static/js/main.2c72d176.js",
     "static/js/453.adc34edb.chunk.js": "/static/js/453.adc34edb.chunk.js",
     "static/media/oculos_bulget.png": "/static/media/oculos_bulget.1a9895d700ec3dd2a745.png",
     "static/media/WhatsAppImage2025-06-01at13.36.59.jpeg": "/static/media/WhatsAppImage2025-06-01at13.36.59.af99a410d1ee80d8e776.jpeg",
@@ -15,11 +15,11 @@
     "static/media/10.webp": "/static/media/10.195bcd9a5950a74a5813.webp",
     "index.html": "/index.html",
     "main.a9977da2.css.map": "/static/css/main.a9977da2.css.map",
-    "main.7a49028e.js.map": "/static/js/main.7a49028e.js.map",
+    "main.2c72d176.js.map": "/static/js/main.2c72d176.js.map",
     "453.adc34edb.chunk.js.map": "/static/js/453.adc34edb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a9977da2.css",
-    "static/js/main.7a49028e.js"
+    "static/js/main.2c72d176.js"
   ]
 }
