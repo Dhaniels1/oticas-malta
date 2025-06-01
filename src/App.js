@@ -9,7 +9,7 @@ import Contact from './pages/Contact';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/oticas-malta">
       <div className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow">
