@@ -44,5 +44,16 @@
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"
+  },
+  "description": "## Visão Geral",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dhaniels1/oticas-malta.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dhaniels1/oticas-malta/issues"
   }
 }
