@@ -84,7 +84,7 @@ const Home = () => {
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-64 bg-gray-200 relative">
                 <img 
-                  src={`${process.env.PUBLIC_URL}/9.jpg`}
+                  src={`${process.env.PUBLIC_URL}/images/9.jpg`}
                   alt="Marcas Exclusivas" 
                   className="w-full h-full object-cover"
                 />
