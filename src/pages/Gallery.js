@@ -18,63 +18,63 @@ const Gallery = () => {
   const productData = [
     {
       id: 1,
-      image: `${process.env.PUBLIC_URL}/images/oculos-sol-1.jpg`,
+      image: `${process.env.PUBLIC_URL}/images/1.jpg`,
       model: 'Wayfarer Classic',
       brand: 'Ray-Ban',
       type: 'Solar'
     },
     {
       id: 2,
-      image: `${process.env.PUBLIC_URL}/images/oculos-sol-2.jpg`,
+      image: `${process.env.PUBLIC_URL}/images/2.webp`,
       model: 'Round Double Bridge',
       brand: 'Ray-Ban',
       type: 'Solar'
     },
     {
       id: 3,
-      image: `${process.env.PUBLIC_URL}/images/oculos-sol-3.jpg`,
+      image: `${process.env.PUBLIC_URL}/images/3.webp`,
       model: 'Wayfarer Original',
       brand: 'Ray-Ban',
       type: 'Solar'
     },
     {
       id: 4,
-      image: `${process.env.PUBLIC_URL}/images/oculos-sol-4.jpg`,
+      image: `${process.env.PUBLIC_URL}/images/4.jpg`,
       model: 'Sport Shield',
       brand: 'KDEAM',
       type: 'Solar'
     },
     {
       id: 5,
-      image: `${process.env.PUBLIC_URL}/images/oculos-sol-5.jpg`,
+      image: `${process.env.PUBLIC_URL}/6.webp`,
       model: 'H-Block',
       brand: 'HB',
       type: 'Solar'
     },
     {
       id: 6,
-      image: `${process.env.PUBLIC_URL}/images/oculos-sol-6.jpg`,
+      image: `${process.env.PUBLIC_URL}/7.webp`,
       model: 'Speed Runner',
       brand: 'Speed',
       type: 'Solar'
     },
     {
       id: 7,
-      image: `${process.env.PUBLIC_URL}/images/oculos-sol-7.jpg`,
+      image: `${process.env.PUBLIC_URL}/9.jpg`,
       model: 'Shield Pro',
       brand: 'Vulkan',
       type: 'Solar'
     },
     {
       id: 8,
-      image: `${process.env.PUBLIC_URL}/images/oculos-grau-1.jpg`,
+      image: `${process.env.PUBLIC_URL}/9.jpg`,
       model: 'Elegance',
       brand: 'Bulget',
       type: 'Grau'
     },
     {
       id: 9,
-      image: `${process.env.PUBLIC_URL}/images/oculos-grau-2.jpg`,
+      image: `${process.env.PUBLIC_URL}/9.jpg`,
       model: 'Urban Style',
       brand: 'Vulkan',
       type: 'Grau'
