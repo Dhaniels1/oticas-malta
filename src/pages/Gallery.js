@@ -18,14 +18,14 @@ const Gallery = () => {
   const productData = [
     {
       id: 1,
-      image: `${process.env.PUBLIC_URL}/images/oculos-sol-1.jpg`,
+      image: `${process.env.PUBLIC_URL}/images/1.jpg`,
       model: 'Wayfarer Classic',
       brand: 'Ray-Ban',
       type: 'Solar'
     },
     {
       id: 2,
-      image: `${process.env.PUBLIC_URL}/images/oculos-sol-2.jpg`,
+      image: `${process.env.PUBLIC_URL}/images/1.jpg`,
       model: 'Round Double Bridge',
       brand: 'Ray-Ban',
       type: 'Solar'
