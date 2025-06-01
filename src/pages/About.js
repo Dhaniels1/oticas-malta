@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import getImageUrl from '../utils/getImageUrl';
 
 /**
  * Página Sobre Nós
@@ -32,7 +33,7 @@ const About = () => {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-6 md:mb-0 md:pr-6">
               <img 
-                src={`${process.env.PUBLIC_URL}/images/equipe.jpg`}
+                src={getImageUrl('images/equipe.jpg')}
                 alt="Equipe Óticas Malta" 
                 className="rounded-lg shadow-md w-full"
               />

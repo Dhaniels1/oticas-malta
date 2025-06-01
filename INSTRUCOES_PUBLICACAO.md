@@ -39,7 +39,18 @@ Certifique-se de que o arquivo `package.json` contém a configuração correta d
 
 Substitua `SEU-USUARIO` pelo seu nome de usuário do GitHub.
 
-### 5. Verifique o Basename no Router
+### 5. Verifique o arquivo .env
+
+Certifique-se de que o arquivo `.env` contém a configuração correta do PUBLIC_URL:
+
+```
+REACT_APP_PUBLIC_URL=https://SEU-USUARIO.github.io/oticas-malta
+PUBLIC_URL=https://SEU-USUARIO.github.io/oticas-malta
+```
+
+Substitua `SEU-USUARIO` pelo seu nome de usuário do GitHub.
+
+### 6. Verifique o Basename no Router
 
 No arquivo `src/App.js`, certifique-se de que o Router está configurado com o basename correto:
 
@@ -47,7 +58,7 @@ No arquivo `src/App.js`, certifique-se de que o Router está configurado com o b
 <Router basename="/oticas-malta">
 ```
 
-### 6. Crie o Arquivo .nojekyll
+### 7. Crie o Arquivo .nojekyll
 
 ```bash
 touch .nojekyll
@@ -55,7 +66,7 @@ touch .nojekyll
 
 Este arquivo é necessário para evitar problemas com o processamento Jekyll do GitHub Pages.
 
-### 7. Faça o Build e Deploy
+### 8. Faça o Build e Deploy
 
 ```bash
 npm run build
@@ -64,7 +75,7 @@ npm run deploy
 
 O comando `npm run deploy` utilizará o pacote gh-pages para publicar o site na branch gh-pages do seu repositório.
 
-### 8. Configure o GitHub Pages
+### 9. Configure o GitHub Pages
 
 1. Acesse as configurações do seu repositório no GitHub
 2. Role até a seção "Pages"
@@ -72,7 +83,7 @@ O comando `npm run deploy` utilizará o pacote gh-pages para publicar o site na 
 4. Em "Branch", selecione "gh-pages" e "/ (root)"
 5. Clique em "Save"
 
-### 9. Acesse o Site
+### 10. Acesse o Site
 
 Após alguns minutos, seu site estará disponível em:
 
@@ -90,13 +101,15 @@ Se o site mostrar uma tela branca ou erro 404:
 2. Verifique se a homepage no package.json está correta
 3. Certifique-se de que o arquivo .nojekyll foi criado
 4. Verifique se a branch gh-pages foi criada corretamente
+5. Verifique se o arquivo .env está configurado corretamente
 
 ### Imagens Não Aparecem
 
 Se as imagens não estiverem aparecendo:
 
 1. Verifique se todas as imagens estão na pasta `public/images`
-2. Certifique-se de que os caminhos das imagens usam `${process.env.PUBLIC_URL}/images/...`
+2. Certifique-se de que os caminhos das imagens usam a função `getImageUrl` para garantir compatibilidade com o GitHub Pages
+3. Verifique se o arquivo .env está configurado corretamente com o PUBLIC_URL
 
 ### Estilos CSS Não Aplicados
 

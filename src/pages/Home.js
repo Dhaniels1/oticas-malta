@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import getImageUrl from '../utils/getImageUrl';
 
 /**
  * Página inicial (Home) do site da Óticas Malta
@@ -44,7 +45,7 @@ const Home = () => {
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-64 bg-gray-200 relative">
                 <img 
-                  src={`${process.env.PUBLIC_URL}/images/oculos-sol.jpg`}
+                  src={getImageUrl('images/oculos-sol.jpg')}
                   alt="Óculos de Sol" 
                   className="w-full h-full object-cover"
                 />
@@ -64,7 +65,7 @@ const Home = () => {
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-64 bg-gray-200 relative">
                 <img 
-                  src={`${process.env.PUBLIC_URL}/images/oculos-grau.jpg`}
+                  src={getImageUrl('images/oculos-grau.jpg')}
                   alt="Óculos de Grau" 
                   className="w-full h-full object-cover"
                 />
@@ -84,7 +85,7 @@ const Home = () => {
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-64 bg-gray-200 relative">
                 <img 
-                  src={`${process.env.PUBLIC_URL}/images/marcas.jpg`}
+                  src={getImageUrl('images/marcas.jpg')}
                   alt="Marcas Exclusivas" 
                   className="w-full h-full object-cover"
                 />
@@ -149,7 +150,7 @@ const Home = () => {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <img 
-                src={`${process.env.PUBLIC_URL}/images/equipe.jpg`}
+                src={getImageUrl('images/equipe.jpg')}
                 alt="Equipe Óticas Malta" 
                 className="rounded-lg shadow-md w-full"
               />
