@@ -23,7 +23,7 @@ const Home = () => {
               Ver Produtos
             </Link>
             <a 
-              href="https://wa.me/5532998136679" 
+              href="https://wa.me/5532998136678" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-malta-gold text-white px-6 py-3 rounded-md font-bold hover:bg-white hover:text-malta-green transition-all duration-300"

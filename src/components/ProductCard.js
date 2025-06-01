@@ -11,7 +11,7 @@ import getImageUrl from '../utils/getImageUrl';
  * @param {string} props.type - Tipo do óculos (grau/solar)
  * @param {string} props.phone - Número de telefone para contato WhatsApp
  */
-const ProductCard = ({ image, model, brand, type, phone = "5532998136679" }) => {
+const ProductCard = ({ image, model, brand, type, phone = "5532998136678" }) => {
   // Função para formatar a mensagem do WhatsApp
   const formatWhatsAppMessage = () => {
     const message = `Olá! Vi o modelo ${model} da ${brand} no site e gostaria de reservar.`;
