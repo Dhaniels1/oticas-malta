@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.btn-primary {
+  @apply bg-malta-green text-white py-2 px-4 rounded-md hover:bg-opacity-90 transition-all duration-300 font-montserrat font-semibold;
+}
+
+.btn-secondary {
+  @apply border-2 border-malta-green text-malta-green py-2 px-4 rounded-md hover:bg-malta-green hover:text-white transition-all duration-300 font-montserrat font-semibold;
+}
+
+.btn-action {
+  @apply bg-malta-gold text-white py-2 px-4 rounded-md hover:bg-opacity-90 transition-all duration-300 font-montserrat font-semibold;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300;
+}
+
+.container {
+  @apply mx-auto px-4 max-w-7xl;
+}
