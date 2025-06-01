@@ -19,7 +19,7 @@ const ProductCard = ({ image, model, brand, type, phone = "5532998136679" }) => 
 
   return (
     <div className="card flex flex-col h-full">
-      <div className="relative pt-[100%] overflow-hidden bg-malta-gray">
+      <div className="relative pt-[100%] overflow-hidden bg-gray-100">
         <img 
           src={image} 
           alt={`${model} - ${brand}`} 

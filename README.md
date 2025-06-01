@@ -1,210 +1,70 @@
-# Óticas Malta - Documentação do Projeto
+# Getting Started with Create React App
 
-## Visão Geral
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Este projeto é um site estático para a Óticas Malta, desenvolvido com React e TailwindCSS. O site permite que os clientes visualizem os modelos de óculos disponíveis e façam reservas via WhatsApp.
+## Available Scripts
 
-## Estrutura do Projeto
+In the project directory, you can run:
 
-```
-oticas_malta_site/
-├── public/                 # Arquivos públicos
-├── src/                    # Código fonte
-│   ├── assets/             # Imagens e recursos estáticos
-│   ├── components/         # Componentes reutilizáveis
-│   │   ├── Header.js       # Cabeçalho do site
-│   │   ├── Footer.js       # Rodapé do site
-│   │   └── ProductCard.js  # Card de produto para a galeria
-│   ├── pages/              # Páginas do site
-│   │   ├── Home.js         # Página inicial
-│   │   ├── Gallery.js      # Galeria de produtos
-│   │   ├── About.js        # Página Sobre Nós
-│   │   └── Contact.js      # Página de Contato
-│   ├── App.js              # Componente principal com rotas
-│   ├── index.js            # Ponto de entrada da aplicação
-│   └── index.css           # Estilos globais e configuração do TailwindCSS
-├── tailwind.config.js      # Configuração do TailwindCSS
-├── package.json            # Dependências e scripts
-└── README.md               # Documentação do projeto
-```
+### `npm start`
 
-## Tecnologias Utilizadas
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- **React**: Biblioteca JavaScript para construção de interfaces
-- **React Router**: Para navegação entre páginas
-- **TailwindCSS**: Framework CSS para estilização
-- **GitHub Pages**: Para hospedagem do site
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Guia de Cores e Estilos
+### `npm test`
 
-As cores e estilos do site seguem o guia de design definido no arquivo `tailwind.config.js`:
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- **Verde Óticas Malta**: `#0A5C36`
-- **Dourado**: `#D4AF37`
-- **Branco**: `#FFFFFF`
-- **Cinza Claro**: `#F5F5F5`
+### `npm run build`
 
-As fontes utilizadas são:
-- **Montserrat**: Para títulos e elementos de destaque
-- **Open Sans**: Para textos e conteúdo geral
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Componentes Principais
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Header
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-O componente `Header` contém o logo da Óticas Malta e o menu de navegação. Ele é responsivo e se adapta a diferentes tamanhos de tela.
+### `npm run eject`
 
-### Footer
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-O componente `Footer` contém informações de contato, endereço e links para redes sociais. Também inclui um botão para contato via WhatsApp.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### ProductCard
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-O componente `ProductCard` é utilizado na galeria para exibir os produtos disponíveis. Cada card contém:
-- Imagem do produto
-- Nome do modelo
-- Marca
-- Tipo (Grau/Solar)
-- Botão para reserva via WhatsApp
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Páginas
+## Learn More
 
-### Home
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-A página inicial apresenta:
-- Banner principal com chamada para ação
-- Destaques de produtos
-- Seção "Por que escolher a Óticas Malta"
-- Apresentação da equipe
-- Lista de marcas disponíveis
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Gallery
+### Code Splitting
 
-A galeria de produtos permite:
-- Visualizar todos os produtos disponíveis
-- Filtrar por marca e tipo
-- Reservar produtos via WhatsApp
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### About
+### Analyzing the Bundle Size
 
-A página "Sobre Nós" contém:
-- História da loja
-- Apresentação da equipe
-- Missão e valores
-- Localização
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Contact
+### Making a Progressive Web App
 
-A página de contato inclui:
-- Formulário de contato
-- Informações de contato
-- Horário de funcionamento
-- Mapa de localização
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-## Integração com WhatsApp
+### Advanced Configuration
 
-A integração com WhatsApp é feita através de links que redirecionam para o aplicativo ou site do WhatsApp com uma mensagem pré-formatada. A função `formatWhatsAppMessage` é utilizada para criar esses links.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-Exemplo:
-```javascript
-const formatWhatsAppMessage = () => {
-  const message = `Olá! Vi o modelo ${model} da ${brand} no site e gostaria de reservar.`;
-  return encodeURIComponent(message);
-};
+### Deployment
 
-// Uso
-<a href={`https://wa.me/5532998136679?text=${formatWhatsAppMessage()}`}>
-  Reservar via WhatsApp
-</a>
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-## Como Executar o Projeto Localmente
+### `npm run build` fails to minify
 
-1. Certifique-se de ter o Node.js instalado
-2. Clone o repositório
-3. Instale as dependências:
-   ```
-   npm install
-   ```
-4. Execute o projeto:
-   ```
-   npm start
-   ```
-5. Acesse `http://localhost:3000` no navegador
-
-## Como Fazer o Build para Produção
-
-Para gerar os arquivos estáticos para publicação:
-
-```
-npm run build
-```
-
-Os arquivos serão gerados na pasta `build/`.
-
-## Como Publicar no GitHub Pages
-
-1. Crie um repositório no GitHub
-2. Adicione o repositório como remote:
-   ```
-   git remote add origin https://github.com/seu-usuario/oticas-malta.git
-   ```
-3. Instale o pacote gh-pages:
-   ```
-   npm install --save-dev gh-pages
-   ```
-4. Adicione os scripts no package.json:
-   ```json
-   "scripts": {
-     "predeploy": "npm run build",
-     "deploy": "gh-pages -d build"
-   }
-   ```
-5. Adicione a propriedade homepage no package.json:
-   ```json
-   "homepage": "https://seu-usuario.github.io/oticas-malta"
-   ```
-6. Execute o deploy:
-   ```
-   npm run deploy
-   ```
-
-## Como Atualizar o Conteúdo
-
-### Adicionar Novos Produtos
-
-Para adicionar novos produtos à galeria, edite o arquivo `src/pages/Gallery.js`:
-
-1. Adicione a imagem na pasta `src/assets/`
-2. Importe a imagem no início do arquivo:
-   ```javascript
-   import novoProduto from '../assets/novo-produto.jpg';
-   ```
-3. Adicione o produto ao array `productData`:
-   ```javascript
-   {
-     id: 10, // Use um ID único
-     image: novoProduto,
-     model: 'Nome do Modelo',
-     brand: 'Marca',
-     type: 'Grau' // ou 'Solar'
-   }
-   ```
-
-### Atualizar Informações de Contato
-
-Para atualizar informações de contato, edite os arquivos:
-- `src/components/Footer.js`: Para o número de WhatsApp no rodapé
-- `src/pages/Contact.js`: Para informações na página de contato
-
-### Atualizar Conteúdo da Página Sobre Nós
-
-Para atualizar o conteúdo da página "Sobre Nós", edite o arquivo `src/pages/About.js`.
-
-## Manutenção e Suporte
-
-Para qualquer dúvida ou suporte, entre em contato com o desenvolvedor.
-
----
-
-Desenvolvido com ❤️ para Óticas Malta
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

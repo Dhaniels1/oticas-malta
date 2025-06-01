@@ -1,17 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ProductCard from '../components/ProductCard';
 
-// Importação das imagens
-import rayban1 from '../assets/1.jpg';
-import rayban2 from '../assets/5.jpg';
-import rayban3 from '../assets/6.webp';
-import kdeam from '../assets/9.jpg';
-import hb from '../assets/10.webp';
-import speed from '../assets/7.webp';
-import vulkan from '../assets/3.webp';
-import bulget from '../assets/oculos_bulget.png';
-import grau from '../assets/2.webp';
-
 /**
  * Página de Galeria
  * Exibe todos os produtos disponíveis com opções de filtro
@@ -29,63 +18,63 @@ const Gallery = () => {
   const productData = [
     {
       id: 1,
-      image: rayban1,
+      image: `${process.env.PUBLIC_URL}/images/oculos-sol-1.jpg`,
       model: 'Wayfarer Classic',
       brand: 'Ray-Ban',
       type: 'Solar'
     },
     {
       id: 2,
-      image: rayban2,
+      image: `${process.env.PUBLIC_URL}/images/oculos-sol-2.jpg`,
       model: 'Round Double Bridge',
       brand: 'Ray-Ban',
       type: 'Solar'
     },
     {
       id: 3,
-      image: rayban3,
+      image: `${process.env.PUBLIC_URL}/images/oculos-sol-3.jpg`,
       model: 'Wayfarer Original',
       brand: 'Ray-Ban',
       type: 'Solar'
     },
     {
       id: 4,
-      image: kdeam,
+      image: `${process.env.PUBLIC_URL}/images/oculos-sol-4.jpg`,
       model: 'Sport Shield',
       brand: 'KDEAM',
       type: 'Solar'
     },
     {
       id: 5,
-      image: hb,
+      image: `${process.env.PUBLIC_URL}/images/oculos-sol-5.jpg`,
       model: 'H-Block',
       brand: 'HB',
       type: 'Solar'
     },
     {
       id: 6,
-      image: speed,
+      image: `${process.env.PUBLIC_URL}/images/oculos-sol-6.jpg`,
       model: 'Speed Runner',
       brand: 'Speed',
       type: 'Solar'
     },
     {
       id: 7,
-      image: vulkan,
+      image: `${process.env.PUBLIC_URL}/images/oculos-sol-7.jpg`,
       model: 'Shield Pro',
       brand: 'Vulkan',
       type: 'Solar'
     },
     {
       id: 8,
-      image: bulget,
+      image: `${process.env.PUBLIC_URL}/images/oculos-grau-1.jpg`,
       model: 'Elegance',
       brand: 'Bulget',
       type: 'Grau'
     },
     {
       id: 9,
-      image: grau,
+      image: `${process.env.PUBLIC_URL}/images/oculos-grau-2.jpg`,
       model: 'Urban Style',
       brand: 'Vulkan',
       type: 'Grau'
@@ -119,11 +108,11 @@ const Gallery = () => {
   const brands = ['Ray-Ban', 'HB', 'Speed', 'Vulkan', 'Bulget', 'KDEAM'];
 
   return (
-    <div className="container mx-auto py-8">
+    <div className="container mx-auto py-8 px-4">
       <h1 className="text-3xl font-bold text-malta-green text-center mb-8">Galeria de Produtos</h1>
       
       {/* Filtros */}
-      <div className="bg-malta-gray p-4 rounded-lg mb-8">
+      <div className="bg-gray-100 p-4 rounded-lg mb-8">
         <div className="flex flex-wrap gap-4 justify-center">
           {/* Filtro por marca */}
           <div className="w-full md:w-auto">

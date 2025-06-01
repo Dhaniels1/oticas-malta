@@ -4,10 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-/**
- * Ponto de entrada da aplicação React
- * Renderiza o componente App no elemento root do HTML
- */
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

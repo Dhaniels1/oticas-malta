@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import equipe from '../assets/WhatsAppImage2025-06-01at13.36.59.jpeg';
 
 /**
  * Página inicial (Home) do site da Óticas Malta
@@ -35,7 +34,7 @@ const Home = () => {
       </section>
 
       {/* Destaques de Produtos */}
-      <section className="py-16 bg-malta-gray">
+      <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-malta-green text-center mb-12">
             Destaques
@@ -45,7 +44,7 @@ const Home = () => {
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-64 bg-gray-200 relative">
                 <img 
-                  src={require('../assets/1.jpg')} 
+                  src={`${process.env.PUBLIC_URL}/images/oculos-sol.jpg`}
                   alt="Óculos de Sol" 
                   className="w-full h-full object-cover"
                 />
@@ -65,7 +64,7 @@ const Home = () => {
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-64 bg-gray-200 relative">
                 <img 
-                  src={require('../assets/2.webp')} 
+                  src={`${process.env.PUBLIC_URL}/images/oculos-grau.jpg`}
                   alt="Óculos de Grau" 
                   className="w-full h-full object-cover"
                 />
@@ -85,7 +84,7 @@ const Home = () => {
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-64 bg-gray-200 relative">
                 <img 
-                  src={require('../assets/5.jpg')} 
+                  src={`${process.env.PUBLIC_URL}/images/marcas.jpg`}
                   alt="Marcas Exclusivas" 
                   className="w-full h-full object-cover"
                 />
@@ -145,12 +144,12 @@ const Home = () => {
       </section>
 
       {/* Equipe */}
-      <section className="py-16 bg-malta-gray">
+      <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <img 
-                src={equipe} 
+                src={`${process.env.PUBLIC_URL}/images/equipe.jpg`}
                 alt="Equipe Óticas Malta" 
                 className="rounded-lg shadow-md w-full"
               />

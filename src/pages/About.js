@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import equipe from '../assets/WhatsAppImage2025-06-01at13.36.59.jpeg';
 
 /**
  * Página Sobre Nós
@@ -8,7 +7,7 @@ import equipe from '../assets/WhatsAppImage2025-06-01at13.36.59.jpeg';
  */
 const About = () => {
   return (
-    <div className="container mx-auto py-8">
+    <div className="container mx-auto py-8 px-4">
       <h1 className="text-3xl font-bold text-malta-green text-center mb-8">Sobre Nós</h1>
       
       {/* História da loja */}
@@ -33,7 +32,7 @@ const About = () => {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-6 md:mb-0 md:pr-6">
               <img 
-                src={equipe} 
+                src={`${process.env.PUBLIC_URL}/images/equipe.jpg`}
                 alt="Equipe Óticas Malta" 
                 className="rounded-lg shadow-md w-full"
               />
@@ -97,7 +96,7 @@ const About = () => {
               </Link>
             </div>
             <div className="md:w-1/2 md:pl-6">
-              <div className="bg-malta-gray h-64 rounded-lg flex items-center justify-center">
+              <div className="bg-gray-100 h-64 rounded-lg flex items-center justify-center">
                 <p className="text-gray-600 text-center p-4">
                   Mapa será carregado aqui quando o site estiver online.
                 </p>

@@ -20,24 +20,24 @@ const Header = () => {
           <nav className="w-full">
             <ul className="flex flex-wrap justify-center space-x-1 md:space-x-8">
               <li>
-                <a href="/" className="block px-4 py-2 text-malta-green hover:text-malta-gold font-montserrat font-semibold transition-colors">
+                <Link to="/" className="block px-4 py-2 text-malta-green hover:text-malta-gold font-montserrat font-semibold transition-colors">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/galeria" className="block px-4 py-2 text-malta-green hover:text-malta-gold font-montserrat font-semibold transition-colors">
+                <Link to="/galeria" className="block px-4 py-2 text-malta-green hover:text-malta-gold font-montserrat font-semibold transition-colors">
                   Galeria
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/sobre" className="block px-4 py-2 text-malta-green hover:text-malta-gold font-montserrat font-semibold transition-colors">
+                <Link to="/sobre" className="block px-4 py-2 text-malta-green hover:text-malta-gold font-montserrat font-semibold transition-colors">
                   Sobre Nós
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/contato" className="block px-4 py-2 text-malta-green hover:text-malta-gold font-montserrat font-semibold transition-colors">
+                <Link to="/contato" className="block px-4 py-2 text-malta-green hover:text-malta-gold font-montserrat font-semibold transition-colors">
                   Contato
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
