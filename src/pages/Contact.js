@@ -102,7 +102,7 @@ const Contact = () => {
             
             <div className="mt-6">
               <a 
-                href={`https://wa.me/5532998136679?text=${formatWhatsAppMessage()}`}
+                href={`https://wa.me/5532998136678?text=${formatWhatsAppMessage()}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="whatsapp-button w-full text-center block"
