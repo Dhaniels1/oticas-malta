@@ -99,64 +99,35 @@ const Gallery = () => {
   const brands = ['Ray-Ban', 'HB', 'Speed', 'Vulkan', 'Bulget', 'KDEAM'];
 
   return (
-    <div className="container mx-auto py-8 px-4">
-      <h1 className="text-3xl font-bold text-malta-green text-center mb-8">Galeria de Produtos</h1>
-      
-      {/* Filtros */}
-      <div className="bg-gray-100 p-4 rounded-lg mb-8">
-        <div className="flex flex-wrap gap-4 justify-center">
-          {/* Filtro por marca */}
-          <div className="w-full md:w-auto">
-            <label htmlFor="brand-filter" className="block mb-2 font-semibold text-malta-green">Marca</label>
-            <select 
-              id="brand-filter"
-              className="w-full p-2 border border-gray-300 rounded-md"
-              value={filters.brand}
-              onChange={(e) => handleFilterChange('brand', e.target.value)}
-            >
+    <div className="malta-gallery-page">
+      <section className="malta-interior-hero"><div className="malta-container">
+        <p className="malta-overline">NOSSA CURADORIA / CATÁLOGO</p>
+        <h1>Modelos para <em>cada olhar.</em></h1>
+        <p>Uma seleção demonstrativa de modelos. Explore a coleção por marca e por tipo de armação.</p>
+      </div></section>
+      <section className="malta-container malta-gallery-content">
+        <div className="malta-gallery-heading"><div><p className="malta-overline">COLEÇÃO / 2026</p><h2>Descubra os modelos</h2></div><span>{products.length} {products.length === 1 ? 'modelo' : 'modelos'}</span></div>
+        <div className="malta-filters">
+          <label htmlFor="brand-filter">Marca
+            <select id="brand-filter" value={filters.brand} onChange={e=>handleFilterChange('brand',e.target.value)}>
               <option value="all">Todas as marcas</option>
-              {brands.map(brand => (
-                <option key={brand} value={brand}>{brand}</option>
-              ))}
+              {brands.map(brand=><option key={brand} value={brand}>{brand}</option>)}
             </select>
-          </div>
-          
-          {/* Filtro por tipo */}
-          <div className="w-full md:w-auto">
-            <label htmlFor="type-filter" className="block mb-2 font-semibold text-malta-green">Tipo</label>
-            <select 
-              id="type-filter"
-              className="w-full p-2 border border-gray-300 rounded-md"
-              value={filters.type}
-              onChange={(e) => handleFilterChange('type', e.target.value)}
-            >
+          </label>
+          <label htmlFor="type-filter">Categoria
+            <select id="type-filter" value={filters.type} onChange={e=>handleFilterChange('type',e.target.value)}>
               <option value="all">Todos os tipos</option>
-              <option value="Solar">Solar</option>
-              <option value="Grau">Grau</option>
+              <option value="Solar">Solar</option><option value="Grau">Grau</option>
             </select>
-          </div>
+          </label>
         </div>
-      </div>
-      
-      {/* Grid de produtos */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {products.map(product => (
-          <ProductCard 
-            key={product.id}
-            image={product.image}
-            model={product.model}
-            brand={product.brand}
-            type={product.type}
-          />
-        ))}
-      </div>
-      
-      {/* Mensagem quando não há produtos */}
-      {products.length === 0 && (
-        <div className="text-center py-8">
-          <p className="text-lg text-gray-600">Nenhum produto encontrado com os filtros selecionados.</p>
-        </div>
-      )}
+        {products.length > 0 ? (
+          <div className="malta-products-grid">{products.map(product=>(
+            <ProductCard key={product.id} image={product.image} model={product.model} brand={product.brand} type={product.type}/>
+          ))}</div>
+        ) : <p className="malta-no-results">Nenhum modelo encontrado com esses filtros. Experimente outra combinação.</p>}
+        <p className="malta-gallery-note">Modelos de demonstração, sem consulta de estoque ou disponibilidade comercial.</p>
+      </section>
     </div>
   );
 };
