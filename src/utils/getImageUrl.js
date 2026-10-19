@@ -1,5 +1,3 @@
-import React from 'react';
-
 /**
  * Componente utilitário para garantir que as imagens sejam carregadas corretamente
  * mesmo em ambientes de subdiretório como GitHub Pages
