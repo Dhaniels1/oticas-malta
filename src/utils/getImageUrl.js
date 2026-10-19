@@ -1,21 +1,16 @@
 /**
- * Componente utilitário para garantir que as imagens sejam carregadas corretamente
- * mesmo em ambientes de subdiretório como GitHub Pages
+ * Resolve imagens com caminhos locais nos dois hosts:
+ * - Netlify em /images/...
+ * - GitHub Pages em /oticas-malta/images/...
+ * Evita usar PUBLIC_URL do Create React App como origem absoluta.
  */
 const getImageUrl = (imagePath) => {
-  // Verifica se o caminho já começa com http ou https (URL absoluta)
-  if (imagePath.startsWith('http')) {
-    return imagePath;
-  }
-  
-  // Remove a barra inicial se existir para evitar caminhos duplos
-  const cleanPath = imagePath.startsWith('/') ? imagePath.substring(1) : imagePath;
-  
-  // Usa o PUBLIC_URL do ambiente, ou um fallback para o basename do repositório
-  const baseUrl = process.env.PUBLIC_URL || '/oticas-malta';
-  
-  // Retorna o caminho completo
-  return `${baseUrl.replace(/\/+$/, '')}/${cleanPath}`;
+  if (/^https?:\/\//i.test(imagePath)) return imagePath;
+  const cleanPath = imagePath.replace(/^\/+/, '');
+  const path = window.location.pathname;
+  const prefix = path === '/oticas-malta' || path.startsWith('/oticas-malta/')
+    ? '/oticas-malta'
+    : '';
+  return `${prefix}/${cleanPath}`;
 };
-
 export default getImageUrl;

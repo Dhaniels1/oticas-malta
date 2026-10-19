@@ -7,9 +7,19 @@ import Gallery from './pages/Gallery';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
+// No GitHub Pages o site fica em /oticas-malta/.
+// No Netlify ele é servido na raiz /. Não dependa de PUBLIC_URL
+// para o basename: o CRA também o utiliza para assets do build.
+function getRouterBase() {
+  const path = window.location.pathname;
+  return path === '/oticas-malta' || path.startsWith('/oticas-malta/')
+    ? '/oticas-malta'
+    : '/';
+}
+
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL === '/' ? '/' : '/oticas-malta'}>
+    <Router basename={getRouterBase()}>
       <div className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow">
