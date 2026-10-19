@@ -32,12 +32,7 @@ const Footer = () => {
           <div className="text-center md:text-right">
             <h3 className="text-xl font-bold mb-4">Redes Sociais</h3>
             <div className="flex justify-center md:justify-end space-x-4">
-              <a href="#" className="hover:text-malta-gold transition-colors">
-                Instagram
-              </a>
-              <a href="#" className="hover:text-malta-gold transition-colors">
-                Facebook
-              </a>
+              <span className="text-white/80">Links oficiais a confirmar</span>
             </div>
           </div>
         </div>
