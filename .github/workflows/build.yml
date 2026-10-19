@@ -29,6 +29,9 @@ jobs:
       - name: Instalar dependências (lockfile legado incompatível)
         run: npm install --no-package-lock --no-audit --no-fund
 
+      - name: Auditar catálogo totalmente fictício
+        run: node --test tests/catalogo-ficticio.test.cjs
+
       - name: Verificar build estático
         run: npm run build
 
