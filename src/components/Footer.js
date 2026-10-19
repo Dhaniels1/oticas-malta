@@ -17,6 +17,6 @@ export default function Footer() {
     <p>Sem CNPJ, loja física, equipe, serviços, estoque, reservas ou atendimento real.</p>
    </div>
   </div>
-  <div className="malta-container malta-footer-last"><span>© {new Date().getFullYear()} Ateliê Lume — Marca fictícia de demonstração.</span><span>Óticas Malta · Nome do repositório acadêmico</span></div>
+  <div className="malta-container malta-footer-last"><span>© {new Date().getFullYear()} Ateliê Lume — Marca fictícia de demonstração.</span><span>Interface conceitual · Conteúdo inteiramente ilustrativo</span></div>
  </footer>;
 }
