@@ -235,3 +235,20 @@ body{background:#f9f7f2;color:var(--malta-ink);font-family:'Poppins','Segoe UI',
  .malta-footer{padding-top:50px}.malta-footer-grid{grid-template-columns:1fr;gap:20px;padding-bottom:35px}
 }
 @media(prefers-reduced-motion:reduce){.malta-btn,.malta-category-tile img,.malta-product-card,.malta-product-image img{transition:none}.malta-btn:hover,.malta-product-card:hover,.malta-category-tile:hover img{transform:none}}
+
+
+/* Banco visual autoral gerado por IA: um atlas WebP, dez recortes em SVG. */
+.malta-generated{display:block;width:100%;height:100%;overflow:hidden;flex-shrink:0}
+.malta-hero-photo>.malta-generated{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.malta-category-tile>.malta-generated{width:100%;height:100%;transition:transform .55s}
+.malta-category-tile:hover>.malta-generated{transform:scale(1.055)}
+.malta-story-photo>.malta-generated,.malta-about-image>.malta-generated,.malta-product-image>.malta-generated{width:100%;height:100%}
+.malta-product-image>.malta-generated{transition:transform .35s}
+.malta-product-card:hover .malta-product-image>.malta-generated{transform:scale(1.04)}
+.malta-showcase-banner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:35px;align-items:center;background:#e9e4d9;margin-top:43px;border-radius:8px;overflow:hidden}
+.malta-showcase-banner>.malta-generated{height:250px}
+.malta-showcase-banner>div{padding:22px 35px 22px 0}
+.malta-showcase-banner h3{font:400 28px/1.2 Georgia,serif;color:#183d2b;margin:0 0 13px}
+.malta-showcase-banner p:not(.malta-overline){color:#657568;font-size:13px;line-height:1.8}
+.malta-gallery-note{font-size:12px;line-height:1.8}
+@media(max-width:650px){.malta-showcase-banner{grid-template-columns:1fr;gap:0}.malta-showcase-banner>div{padding:23px}.malta-showcase-banner>.malta-generated{height:210px}}
