@@ -2,15 +2,28 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Contact() {
-  return (
-    <div className="malta-contact-page">
-      <section className="malta-interior-hero">
-        <div className="malta-container"><p className="malta-overline">ENTRE EM CONTATO / INFORMAÇÕES</p><h1>A experiência começa <em>com uma conversa.</em></h1><p>Este é um projeto demonstrativo de frontend. Os canais comerciais precisam de confirmação antes de qualquer divulgação oficial.</p></div>
-      </section>
-      <section className="malta-container malta-simple-grid">
-        <article className="malta-contact-card"><span className="malta-card-icon">↗</span><p className="malta-overline">EXPLORE O SITE</p><h2>Descubra nossa coleção.</h2><p>Navegue pelos modelos de armações, conheça as marcas ilustrativas e utilize os filtros da galeria.</p><Link className="malta-btn malta-btn-gold" to="/galeria">Ver modelos ↗</Link></article>
-        <article className="malta-contact-card soft"><span className="malta-card-icon">i</span><p className="malta-overline">TRANSPARÊNCIA</p><h2>Site de demonstração.</h2><p>Não recebemos mensagens nesta página, não realizamos reservas e não há integração comercial ativa. Os contatos e horários da empresa não foram validados neste projeto.</p><Link to="/sobre" className="malta-more-link">Saiba mais sobre o projeto →</Link></article>
-      </section>
-    </div>
-  );
+ return <div className="malta-contact-page">
+  <section className="malta-interior-hero"><div className="malta-container">
+   <p className="malta-overline">ATELIÊ LUME / CENÁRIO FICTÍCIO</p>
+   <h1>Conheça o <em>universo Lume.</em></h1>
+   <p>Uma página informativa de um projeto acadêmico. Não há empresa real, atendimento, agendamentos ou canal comercial associado a este website.</p>
+  </div></section>
+  <section className="malta-container malta-simple-grid">
+   <article className="malta-contact-card">
+    <span className="malta-card-icon">✧</span>
+    <p className="malta-overline">CENÁRIO DEMONSTRATIVO</p>
+    <h2>Endereço e contato imaginários.</h2>
+    <p><strong>Local ilustrativo:</strong> Avenida do Imaginário, 000 — Cidade Exemplo / Estado Fictício.</p>
+    <p><strong>E-mail ilustrativo:</strong> contato@lume-optico.example</p>
+    <p>Os dados acima são inventados. O domínio .example é reservado para documentação e não deve receber mensagens.</p>
+   </article>
+   <article className="malta-contact-card soft">
+    <span className="malta-card-icon">i</span>
+    <p className="malta-overline">TRANSPARÊNCIA</p>
+    <h2>Sem atendimento ou vendas.</h2>
+    <p>Este site mostra elementos visuais de uma ótica fictícia. Não disponibilizamos preços, estoque, exames, reservas ou formulários de envio. Todos os personagens e ambientes são imagens de IA.</p>
+    <Link to="/galeria" className="malta-more-link">Explorar catálogo imaginário →</Link>
+   </article>
+  </section>
+ </div>;
 }
