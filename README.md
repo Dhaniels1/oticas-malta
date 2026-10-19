@@ -1,6 +1,6 @@
 # Óticas Malta — Site Institucional
 
-Website responsivo de demonstração para uma ótica, desenvolvido com **React 18, React Router e Tailwind CSS**. O projeto apresenta coleções de óculos, informações institucionais e caminhos de contato pelo WhatsApp.
+Website responsivo de demonstração para uma ótica, desenvolvido com **React 18, React Router e Tailwind CSS**. O projeto apresenta coleções de óculos, informações institucionais e galeria com filtros por marca e tipo. O visual foi renovado com identidade editorial verde-floresta e dourado, cartões e navegação responsiva.
 
 **Repositório:** https://github.com/Dhaniels1/oticas-malta
 
@@ -10,12 +10,12 @@ Website responsivo de demonstração para uma ótica, desenvolvido com **React 1
 
 ## O que está implementado
 
-- Página inicial com apresentação da ótica e destaques.
+- Página inicial redesenhada com hero editorial, imagens da coleção e seções visuais.
 - Galeria de modelos, com filtros por marca e tipo.
 - Página "Sobre nós".
-- Página de contato e links de atendimento pelo WhatsApp.
+- Página de contato transparente: sem formulário fictício e sem links para números de WhatsApp conflitantes, até confirmação de contato válido.
 - Navegação entre `/`, `/galeria`, `/sobre` e `/contato`.
-- Layout adaptável com Tailwind CSS.
+- Layout responsivo com Tailwind CSS e estilos próprios em `src/index.css`.
 
 O projeto contém dados de produtos demonstrativos definidos em código, sem banco de dados ou atualização dinâmica de estoque/preços.
 
@@ -48,7 +48,7 @@ npm run build
 
 ## Publicação no GitHub Pages
 
-O `package.json` define `homepage` com o caminho do repositório e contém scripts para geração/publicação.
+O `package.json` define `homepage` com o caminho do repositório. O workflow `.github/workflows/build.yml` compila a branch `main` e, em push, tenta atualizar automaticamente a branch `gh-pages` após um build bem-sucedido. Confirme o resultado no GitHub Actions antes de considerar a revisão publicada.
 
 ```bash
 npm run deploy
@@ -74,9 +74,9 @@ A configuração `PUBLIC_URL` e a função `src/utils/getImageUrl.js` auxiliam o
 
 ## Limitações e pontos de atenção
 
-**Formulário de contato:** o botão atual impede o envio do formulário e **não encaminha mensagens**. A comunicação funcional acontece pelos links externos do WhatsApp. Antes de considerar o site pronto para uso comercial, implemente um método de envio validado ou substitua o formulário por um link de contato explícito.
+**Contato:** a interface demonstrativa não coleta nem transmite mensagens. A página informa que os canais comerciais precisam ser confirmados antes da divulgação.
 
-**WhatsApp:** os números utilizados por alguns links não coincidem com o telefone exibido no rodapé e no contato. **Confirme o número correto da ótica antes de corrigi-los**, para não redirecionar clientes por engano.
+**WhatsApp:** a versão anterior continha números conflitantes. Os links de contato direto foram retirados do novo visual para evitar encaminhamentos incorretos. É necessário validar o número oficial antes de adicionar um atendimento comercial.
 
 **Galeria:** são dados ilustrativos; não há carrinho de compras, gerenciamento de inventário ou integração de pagamentos.
 
@@ -85,6 +85,14 @@ A configuração `PUBLIC_URL` e a função `src/utils/getImageUrl.js` auxiliam o
 ## Qualidade
 
 A versão atual apresenta um **descompasso entre `package.json` e `package-lock.json`**, identificado pelo GitHub Actions. Por enquanto, utilize `npm install --no-package-lock` para instalar de acordo com o manifesto, e `npm run build` para compilar. O workflow executa o mesmo procedimento temporário. Para restabelecer instalações reproduzíveis com `npm ci`, será necessário regenerar e versionar um novo `package-lock.json` com as dependências corretas (usando `npm install` em um ambiente com acesso ao registro npm).
+
+## Revisão visual de outubro de 2026
+
+- Cabeçalho novo, navegação com destaque da rota ativa e identidade de marca.
+- Home editorial com galeria de imagens de produtos já existentes no repositório.
+- Vitrine com cartões redesenhados e filtros funcionais.
+- Seções internas Sobre e Contato revisadas para não sugerir funcionalidades comerciais inexistentes.
+- CSS responsivo, sem novas dependências JavaScript.
 
 ## Autoria e contexto
 
