@@ -1,8 +1,15 @@
-name: Build do site
+name: Build e publicacao da Oticas Malta
 
 on:
   push:
   pull_request:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: oticas-malta-pages
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -24,3 +31,12 @@ jobs:
 
       - name: Verificar build estático
         run: npm run build
+
+      - name: Publicar o build na branch gh-pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: gh-pages
+
