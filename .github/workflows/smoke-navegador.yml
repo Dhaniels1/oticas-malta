@@ -8,39 +8,22 @@ on:
 jobs:
   smoke-browser:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 10
     steps:
+      - name: Obter arquivos
+        uses: actions/checkout@v4
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - name: Configurar navegador Chrome
         uses: browser-actions/setup-chrome@v2
-
-      - name: Verificar pagina no Netlify e GitHub Pages
-        shell: bash
+      - name: Preparar Playwright
         run: |
-          set -euo pipefail
-          CHROME="$(command -v google-chrome || command -v chrome)"
-          test -x "$CHROME"
-          echo "Chrome: $CHROME"
-          for url in \
-            "https://oticas-malta-demo.netlify.app/" \
-            "https://dhaniels1.github.io/oticas-malta/"; do
-            echo "::group::Testando $url"
-            rm -f /tmp/malta-dom.html /tmp/malta-console.log
-            timeout 70s "$CHROME" --headless=new --no-sandbox \
-              --disable-dev-shm-usage --disable-gpu \
-              --disable-features=Translate \
-              --window-size=1366,900 --virtual-time-budget=15000 \
-              --dump-dom "$url" \
-              > /tmp/malta-dom.html 2> /tmp/malta-console.log || {
-                cat /tmp/malta-console.log | tail -70
-                exit 1
-              }
-            if ! grep -q 'Um novo jeito' /tmp/malta-dom.html; then
-              echo "::error::A tela não renderizou o título no navegador: $url"
-              head -c 2200 /tmp/malta-dom.html || true
-              echo
-              tail -100 /tmp/malta-console.log || true
-              exit 1
-            fi
-            echo "Renderização confirmada: $url"
-            echo "::endgroup::"
-          done
+          mkdir -p /tmp/browser-smoke
+          npm install --prefix /tmp/browser-smoke --no-save --no-package-lock --no-audit --no-fund playwright-core@1.58.2
+      - name: Capturar erros reais de renderização
+        env:
+          NODE_PATH: /tmp/browser-smoke/node_modules
+          CHROME_PATH: /usr/bin/google-chrome
+        run: node tests/smoke-browser.cjs
