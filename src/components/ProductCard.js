@@ -1,5 +1,4 @@
 import React from 'react';
-import getImageUrl from '../utils/getImageUrl';
 
 /**
  * Componente de Card de Produto
