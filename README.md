@@ -34,7 +34,7 @@ Requisitos: Node.js com npm.
 ```bash
 git clone https://github.com/Dhaniels1/oticas-malta.git
 cd oticas-malta
-npm ci
+npm install --no-package-lock
 npm start
 ```
 
@@ -84,7 +84,7 @@ A configuração `PUBLIC_URL` e a função `src/utils/getImageUrl.js` auxiliam o
 
 ## Qualidade
 
-Os comandos `npm ci` e `npm run build` permitem verificar se o site compila. O workflow GitHub Actions em `.github/workflows/build.yml` também executa essa verificação em atualizações e pull requests.
+A versão atual apresenta um **descompasso entre `package.json` e `package-lock.json`**, identificado pelo GitHub Actions. Por enquanto, utilize `npm install --no-package-lock` para instalar de acordo com o manifesto, e `npm run build` para compilar. O workflow executa o mesmo procedimento temporário. Para restabelecer instalações reproduzíveis com `npm ci`, será necessário regenerar e versionar um novo `package-lock.json` com as dependências corretas (usando `npm install` em um ambiente com acesso ao registro npm).
 
 ## Autoria e contexto
 
