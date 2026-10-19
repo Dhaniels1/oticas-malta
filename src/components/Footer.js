@@ -2,14 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
-  return (
-    <footer className="malta-footer">
-      <div className="malta-container malta-footer-grid">
-        <div><Link to="/" className="malta-footer-brand">Óticas <strong>Malta.</strong></Link><p>Amor à primeira vista.</p></div>
-        <div><h3>Explorar</h3><Link to="/galeria">Coleção</Link><Link to="/sobre">Sobre o projeto</Link><Link to="/contato">Contato</Link></div>
-        <div><h3>Sobre este site</h3><p>Projeto demonstrativo em React. Catálogo ilustrativo, sem vendas, consultas de estoque ou canal comercial verificado.</p></div>
-      </div>
-      <div className="malta-container malta-footer-last"><span>© {new Date().getFullYear()} Óticas Malta — Projeto de frontend.</span><span>Design e desenvolvimento web</span></div>
-    </footer>
-  );
+ return <footer className="malta-footer">
+  <div className="malta-container malta-footer-grid">
+   <div><Link to="/" className="malta-footer-brand">Ateliê <strong>Lume.</strong></Link>
+    <p>Identidade, produtos e imagens fictícios. Projeto acadêmico de interface web.</p>
+   </div>
+   <div><h3>Explorar</h3>
+    <Link to="/galeria">Catálogo conceitual</Link>
+    <Link to="/sobre">Sobre a demonstração</Link>
+    <Link to="/contato">Informações fictícias</Link>
+   </div>
+   <div><h3>Projeto de portfólio</h3>
+    <p>React · Layout responsivo · Fotografias geradas por IA.</p>
+    <p>Sem CNPJ, loja física, equipe, serviços, estoque, reservas ou atendimento real.</p>
+   </div>
+  </div>
+  <div className="malta-container malta-footer-last"><span>© {new Date().getFullYear()} Ateliê Lume — Marca fictícia de demonstração.</span><span>Óticas Malta · Nome do repositório acadêmico</span></div>
+ </footer>;
 }
