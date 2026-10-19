@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# Óticas Malta — Site Institucional
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Website responsivo de demonstração para uma ótica, desenvolvido com **React 18, React Router e Tailwind CSS**. O projeto apresenta coleções de óculos, informações institucionais e caminhos de contato pelo WhatsApp.
 
-## Available Scripts
+**Repositório:** https://github.com/Dhaniels1/oticas-malta
 
-In the project directory, you can run:
+**Endereço configurado para GitHub Pages:** https://dhaniels1.github.io/oticas-malta
 
-### `npm start`
+> O endereço acima está configurado no `package.json`. A publicação e seu funcionamento devem ser conferidos na página **Settings → Pages** do GitHub. Este projeto não implementa backend ou processamento de pedidos.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## O que está implementado
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Página inicial com apresentação da ótica e destaques.
+- Galeria de modelos, com filtros por marca e tipo.
+- Página "Sobre nós".
+- Página de contato e links de atendimento pelo WhatsApp.
+- Navegação entre `/`, `/galeria`, `/sobre` e `/contato`.
+- Layout adaptável com Tailwind CSS.
 
-### `npm test`
+O projeto contém dados de produtos demonstrativos definidos em código, sem banco de dados ou atualização dinâmica de estoque/preços.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tecnologias
 
-### `npm run build`
+- React 18 e React DOM.
+- React Router DOM 6, com `basename="/oticas-malta"` para publicação em subdiretório.
+- Tailwind CSS 3 e PostCSS.
+- Create React App (`react-scripts` 5).
+- `gh-pages` para deploy estático.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Executar localmente
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Requisitos: Node.js com npm.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/Dhaniels1/oticas-malta.git
+cd oticas-malta
+npm ci
+npm start
+```
 
-### `npm run eject`
+Acesse `http://localhost:3000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Para gerar os arquivos estáticos:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm run build
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Publicação no GitHub Pages
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+O `package.json` define `homepage` com o caminho do repositório e contém scripts para geração/publicação.
 
-## Learn More
+```bash
+npm run deploy
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Esse comando executa o build e publica os arquivos na branch `gh-pages` (caso esteja configurada e haja permissão). Confira a seleção de branch em **Settings → Pages**.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+A configuração `PUBLIC_URL` e a função `src/utils/getImageUrl.js` auxiliam o carregamento de imagens no subdiretório do GitHub Pages. Informações adicionais estão em [INSTRUCOES_PUBLICACAO.md](INSTRUCOES_PUBLICACAO.md).
 
-### Code Splitting
+## Estrutura principal
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Caminho | Responsabilidade |
+| --- | --- |
+| `src/App.js` | Rotas e estrutura principal |
+| `src/pages/Home.js` | Página inicial |
+| `src/pages/Gallery.js` | Galeria e filtros |
+| `src/pages/About.js` | Apresentação institucional |
+| `src/pages/Contact.js` | Contato |
+| `src/components/` | Cabeçalho, rodapé e cards |
+| `public/images/` | Imagens estáticas |
+| `src/index.css` | Estilos Tailwind |
+| `src/utils/getImageUrl.js` | Caminhos de imagens |
 
-### Analyzing the Bundle Size
+## Limitações e pontos de atenção
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Formulário de contato:** o botão atual impede o envio do formulário e **não encaminha mensagens**. A comunicação funcional acontece pelos links externos do WhatsApp. Antes de considerar o site pronto para uso comercial, implemente um método de envio validado ou substitua o formulário por um link de contato explícito.
 
-### Making a Progressive Web App
+**WhatsApp:** os números utilizados por alguns links não coincidem com o telefone exibido no rodapé e no contato. **Confirme o número correto da ótica antes de corrigi-los**, para não redirecionar clientes por engano.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Galeria:** são dados ilustrativos; não há carrinho de compras, gerenciamento de inventário ou integração de pagamentos.
 
-### Advanced Configuration
+**Variáveis de ambiente:** o arquivo `.env` versionado no estado atual contém somente URLs públicas. Nunca inclua senhas, tokens ou credenciais privadas em um arquivo versionado no GitHub. Prefira `.env.example` para configurações de exemplo em revisões futuras.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Qualidade
 
-### Deployment
+Os comandos `npm ci` e `npm run build` permitem verificar se o site compila. O workflow GitHub Actions em `.github/workflows/build.yml` também executa essa verificação em atualizações e pull requests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Autoria e contexto
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Projeto de frontend mantido no perfil [Dhaniels1](https://github.com/Dhaniels1). Site institucional demonstrativo; informações de contato e publicação devem ser conferidas antes de apresentar o projeto como site oficial de uma empresa.
