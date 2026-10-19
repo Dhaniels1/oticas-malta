@@ -1,25 +1,17 @@
 {
-  "short_name": "Óticas Malta",
-  "name": "Óticas Malta - Amor à primeira vista",
+  "short_name": "Ateliê Lume",
+  "name": "Ateliê Lume — Ótica conceitual fictícia",
+  "description": "Site acadêmico fictício, catálogo e imagens de IA.",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#0e5c36",
-  "background_color": "#ffffff"
+  "background_color": "#102e29",
+  "theme_color": "#102e29",
+  "lang": "pt-BR"
 }
