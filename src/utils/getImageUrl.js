@@ -15,7 +15,7 @@ const getImageUrl = (imagePath) => {
   const baseUrl = process.env.PUBLIC_URL || '/oticas-malta';
   
   // Retorna o caminho completo
-  return `${baseUrl}/${cleanPath}`;
+  return `${baseUrl.replace(/\/+$/, '')}/${cleanPath}`;
 };
 
 export default getImageUrl;
