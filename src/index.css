@@ -110,3 +110,128 @@ code {
 .brand-filter button:hover:not(.active) {
   background-color: #e5e7eb;
 }
+
+
+/* Visual editorial da Óticas Malta — compatível com as rotas React existentes. */
+:root{--malta-forest:#102e29;--malta-deep:#0c231f;--malta-gold:#cbb282;--malta-paper:#f4f0e8;--malta-ink:#26382f}
+body{background:#f9f7f2;color:var(--malta-ink);font-family:'Poppins','Segoe UI',Arial,sans-serif}
+.malta-container{width:min(1190px,calc(100% - 48px));margin-inline:auto}
+.malta-header{background:#f9f7f2;border-bottom:1px solid #e8e2d5;position:relative;z-index:10}
+.malta-announcement{background:var(--malta-deep);color:#d6d3bc;text-align:center;font:600 9px 'Montserrat',sans-serif;letter-spacing:2px;padding:10px 15px}
+.malta-nav-wrap{min-height:98px;display:flex;justify-content:space-between;align-items:center;gap:30px}
+.malta-wordmark{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--malta-forest)}
+.malta-monogram{background:var(--malta-forest);color:#d6bf91;font:700 30px Georgia,serif;width:53px;height:53px;display:grid;place-items:center;border-radius:50%}
+.malta-name{font:500 22px Georgia,serif;line-height:1.02}.malta-name strong{font-weight:700}.malta-name small{display:block;font:700 8px 'Montserrat',sans-serif;letter-spacing:2px;color:#7a8b7b;margin-top:8px}
+.malta-nav{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.malta-nav-link{padding:10px 15px;font-size:12px;color:#62746c;text-decoration:none;font-weight:600;border-radius:7px}
+.malta-nav-link:hover,.malta-nav-link.active{color:#173d32;background:#e8e9dc}
+.malta-header-cta{background:var(--malta-forest);color:#fff;text-decoration:none;padding:12px 19px;border-radius:6px;font-size:12px;white-space:nowrap;font-weight:700}.malta-header-cta:hover{background:#265242}
+.malta-hero{background:var(--malta-forest);color:#fff;overflow:hidden}
+.malta-hero-layout{display:grid;grid-template-columns:1.05fr .95fr;min-height:625px}
+.malta-hero-copy{padding:100px 60px 93px 0;position:relative;z-index:2}
+.malta-overline{font:700 10px 'Montserrat',sans-serif;letter-spacing:2.7px;color:#9e8960;margin-bottom:20px}
+.malta-hero .malta-overline,.malta-story .malta-overline,.malta-interior-hero .malta-overline{color:var(--malta-gold)}
+.malta-hero h1{font:400 clamp(48px,5.2vw,76px)/1.07 Georgia,'Times New Roman',serif;letter-spacing:-2.3px;margin:0 0 28px}
+.malta-hero h1 em,.malta-section h2 em,.malta-story h2 em,.malta-interior-hero h1 em{font-style:italic;color:#d3c099}
+.malta-hero-lead{font-size:15px;max-width:445px;color:#b7c9be;line-height:1.95;margin:0 0 34px}
+.malta-hero-actions{display:flex;flex-wrap:wrap;gap:10px}
+.malta-btn{display:inline-flex;justify-content:center;align-items:center;gap:19px;text-decoration:none;min-height:50px;padding:12px 22px;border-radius:5px;font-size:12px;font-weight:700;transition:background .18s,transform .18s}
+.malta-btn:hover{transform:translateY(-2px)}
+.malta-btn-gold{background:var(--malta-gold);color:#1a3229}
+.malta-btn-gold:hover{background:#e6d5b0}
+.malta-btn-line{color:#f5eee0;border:1px solid #526b60}
+.malta-btn-line:hover{background:#24463a}
+.malta-hero-caption{font-size:10px;color:#8ca99b;letter-spacing:.5px;margin-top:81px;display:flex;gap:13px;align-items:center}
+.malta-separator-line{height:1px;width:30px;background:var(--malta-gold)}
+.malta-hero-photo{position:relative;min-height:625px;background:#d1b895;overflow:hidden}
+.malta-hero-photo img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center}
+.malta-hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#102e292d,transparent 35%),linear-gradient(0deg,#071d18a4,transparent 34%)}
+.malta-photo-mark{position:absolute;z-index:1;top:27px;right:28px;color:#fff;font:600 13px 'Montserrat',sans-serif;letter-spacing:2px;writing-mode:vertical-rl}.malta-photo-mark small{color:#edd5ad;font-size:8px;letter-spacing:4px}
+.malta-photo-index{position:absolute;z-index:1;bottom:25px;right:30px;color:#fff;font:700 10px 'Montserrat';letter-spacing:2px}
+.malta-strip{background:#eae4d8;border-bottom:1px solid #dcd0be}
+.malta-strip>.malta-container{min-height:77px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.malta-strip span{font:700 10px 'Montserrat',sans-serif;letter-spacing:2.4px;color:#786d58}
+.malta-section{padding:95px 0}
+.malta-section-intro{display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:36px}
+.malta-section-intro h2{font:400 clamp(37px,4vw,55px)/1.15 Georgia,serif;letter-spacing:-1.9px;margin:0;color:var(--malta-forest)}
+.malta-section-intro h2 em{color:#927c55}
+.malta-section-intro>p{max-width:370px;color:#718079;font-size:13px;line-height:1.85;margin-bottom:5px}
+.malta-collection-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:21px}
+.malta-category-tile{display:block;height:460px;border-radius:4px;overflow:hidden;position:relative;background:#ddd5c7}
+.malta-category-tile img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.malta-category-tile:hover img{transform:scale(1.055)}
+.malta-category-tile:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,24,19,.81),transparent 60%)}
+.malta-category-overlay{position:absolute;z-index:2;bottom:30px;left:33px;right:33px;color:#fff;display:flex;flex-direction:column}
+.malta-category-overlay small{font:700 10px 'Montserrat';letter-spacing:2px;color:#d6c096}
+.malta-category-overlay strong{font:400 clamp(28px,4vw,40px) Georgia,serif;margin:8px 0 12px}
+.malta-category-overlay span{font-size:12px;font-weight:650;color:#e7d9b9}
+.malta-values{background:#ebe8df}.malta-values-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.malta-value{border-top:1px solid #c9c6b8;padding:24px 20px 8px 0}
+.malta-value>span{color:#9f8c66;font:700 11px 'Montserrat',sans-serif;letter-spacing:2px}
+.malta-value h3{font:400 25px Georgia,serif;color:var(--malta-forest);margin:27px 0 10px}
+.malta-value p{font-size:13px;line-height:1.85;color:#69776d}
+.malta-story{background:var(--malta-deep);color:#fff}.malta-story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:75px;align-items:center;padding-block:90px}
+.malta-story-photo{height:410px;overflow:hidden;border-radius:3px}.malta-story-photo img{width:100%;height:100%;object-fit:cover}
+.malta-story h2{font:400 clamp(37px,4.4vw,57px)/1.16 Georgia,serif;letter-spacing:-1px;margin-bottom:25px}
+.malta-story-content>p:not(.malta-overline){font-size:14px;color:#b7c6b6;line-height:1.95;max-width:450px;margin-bottom:28px}
+.malta-interior-hero{background:var(--malta-forest);color:#fff;padding:84px 0 86px}
+.malta-interior-hero h1{font:400 clamp(40px,5vw,66px)/1.12 Georgia,serif;letter-spacing:-1.5px;max-width:850px;margin-bottom:22px}
+.malta-interior-hero>div>p:last-child{font-size:14px;color:#b9cec1;line-height:1.85;max-width:620px;margin:0}
+.malta-gallery-content{padding-block:69px 96px}
+.malta-gallery-heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:25px;gap:20px}
+.malta-gallery-heading .malta-overline{margin-bottom:10px}
+.malta-gallery-heading h2{font:400 35px Georgia,serif;margin:0;color:var(--malta-forest)}
+.malta-gallery-heading>span{color:#77877a;font-size:12px}
+.malta-filters{background:#efeae0;border:1px solid #e0d6c5;padding:22px;display:flex;gap:20px;border-radius:7px;margin-bottom:33px}
+.malta-filters label{font:700 12px 'Montserrat',sans-serif;letter-spacing:.5px;color:#466053;display:flex;flex-direction:column;gap:9px;flex:1}
+.malta-filters select{appearance:auto;background:#fff;border:1px solid #d8d0c2;padding:12px 13px;border-radius:5px;color:#43594a;font:500 13px 'Poppins';width:100%}
+.malta-products-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.malta-product-card{border:1px solid #e2ded4;border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 18px 35px #263a2710;transition:transform .2s}
+.malta-product-card:hover{transform:translateY(-4px)}
+.malta-product-image{height:280px;background:#eeeae2;display:grid;place-items:center;position:relative;overflow:hidden}
+.malta-product-image img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.malta-product-card:hover img{transform:scale(1.045)}
+.malta-type-tag{position:absolute;left:16px;top:16px;background:#faf7f0ee;padding:7px 13px;border-radius:3px;font-size:10px;text-transform:uppercase;font-weight:750;letter-spacing:1px}
+.malta-product-info{padding:23px}.malta-product-info>p{font-size:10px;letter-spacing:1.6px;color:#967f58;text-transform:uppercase;font-weight:750;margin:0 0 7px}
+.malta-product-info h3{font:400 24px Georgia,serif;color:#213f30;margin:0 0 19px}
+.malta-product-bottom{border-top:1px solid #ebe8de;padding-top:16px;display:flex;align-items:center;justify-content:space-between;gap:9px}
+.malta-product-bottom span{font-size:11px;color:#889187}.malta-product-bottom a{font-size:11px;color:#466d58;font-weight:750;text-decoration:none}
+.malta-gallery-note{color:#8c9487;font-size:11px;margin:28px 0 0}.malta-no-results{background:#efeae0;padding:34px;text-align:center;color:#53705d;border-radius:5px}
+.malta-about-grid{padding-block:85px;display:grid;grid-template-columns:.9fr 1.1fr;gap:75px;align-items:center}.malta-about-image{height:450px;overflow:hidden}.malta-about-image img{height:100%;width:100%;object-fit:cover}
+.malta-about-text h2{font:400 clamp(36px,4vw,52px)/1.17 Georgia,serif;color:var(--malta-forest);margin:0 0 22px}
+.malta-about-text p:not(.malta-overline){font-size:14px;color:#6b7a6e;line-height:1.9;margin-bottom:18px}
+.malta-about-footer{background:#eae4d8;padding:66px 0}.malta-about-footer h2{font:400 30px Georgia,serif;color:var(--malta-forest)}.malta-about-footer p:not(.malta-overline){font-size:13px;line-height:1.85;max-width:760px;color:#647569}
+.malta-simple-grid{padding-block:86px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:23px}
+.malta-contact-card{background:#173b2e;color:#fff;padding:43px;border-radius:5px;min-height:370px;display:flex;flex-direction:column;align-items:flex-start}
+.malta-contact-card.soft{background:#eeeae0;color:#234c39}.malta-card-icon{display:grid;place-items:center;border:1px solid #849788;border-radius:50%;width:49px;height:49px;font-size:24px;margin-bottom:23px}
+.malta-contact-card h2{font:400 36px Georgia,serif;margin:0 0 17px}.malta-contact-card>p:not(.malta-overline){font-size:13px;line-height:1.9;margin-bottom:26px;opacity:.8}
+.malta-contact-card .malta-btn,.malta-more-link{margin-top:auto}.malta-more-link{font-size:12px;font-weight:750;text-decoration:none;color:#476c57}
+.malta-footer{background:#0b201b;color:#fff;padding:70px 0 0}
+.malta-footer-grid{display:grid;grid-template-columns:1.1fr .7fr 1.2fr;gap:55px;padding-bottom:58px}
+.malta-footer-brand{font:400 31px Georgia,serif;color:#f2e8d3;text-decoration:none}.malta-footer-brand strong{font-weight:700}
+.malta-footer-grid p{font-size:12px;max-width:320px;color:#a5b9ab;margin:12px 0 0;line-height:1.8}
+.malta-footer-grid h3{font:700 10px 'Montserrat',sans-serif;letter-spacing:2px;color:#d4bd8d;margin:4px 0 21px}
+.malta-footer-grid a:not(.malta-footer-brand){display:block;color:#cbdbcf;text-decoration:none;font-size:12px;margin-bottom:13px}
+.malta-footer-last{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-block:20px;border-top:1px solid #2e4d3e;font-size:10px;color:#8da99a}
+@media(max-width:900px){
+ .malta-nav-wrap{flex-wrap:wrap;justify-content:center;padding-block:20px;gap:16px}
+ .malta-header-cta{display:none}
+ .malta-hero-layout{grid-template-columns:1fr 1fr}.malta-hero-copy{padding:70px 24px 65px 0}
+ .malta-hero-photo{min-height:560px}.malta-products-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .malta-about-grid,.malta-story-grid{gap:32px}
+}
+@media(max-width:650px){
+ .malta-container{width:calc(100% - 32px)}.malta-nav-wrap{min-height:unset}
+ .malta-wordmark{width:100%;justify-content:center}.malta-nav{justify-content:center;gap:1px}.malta-nav-link{font-size:11px;padding:8px 11px}
+ .malta-hero-layout{display:flex;flex-direction:column}.malta-hero-copy{padding:60px 0 43px}.malta-hero h1{font-size:clamp(42px,11vw,61px)}
+ .malta-hero-photo{min-height:340px;height:340px}.malta-hero-caption{margin-top:37px}
+ .malta-strip>.malta-container{min-height:63px;justify-content:center;flex-wrap:wrap;gap:9px 22px;padding-block:16px}.malta-strip span{font-size:9px}
+ .malta-section{padding:65px 0}.malta-section-intro{display:block}.malta-section-intro>p{margin-top:15px}
+ .malta-collection-grid,.malta-values-grid,.malta-story-grid,.malta-about-grid,.malta-simple-grid{grid-template-columns:1fr}
+ .malta-category-tile{height:355px}.malta-story-grid{padding-block:60px}.malta-story-photo{height:270px}
+ .malta-interior-hero{padding:56px 0}.malta-gallery-content{padding-block:43px}.malta-gallery-heading h2{font-size:29px}
+ .malta-filters{flex-direction:column;gap:12px;padding:17px}.malta-products-grid{grid-template-columns:1fr}
+ .malta-product-image{height:325px}.malta-about-grid{padding-block:58px}.malta-about-image{height:315px}
+ .malta-simple-grid{padding-block:55px}.malta-contact-card{min-height:300px;padding:28px}
+ .malta-footer{padding-top:50px}.malta-footer-grid{grid-template-columns:1fr;gap:20px;padding-bottom:35px}
+}
+@media(prefers-reduced-motion:reduce){.malta-btn,.malta-category-tile img,.malta-product-card,.malta-product-image img{transition:none}.malta-btn:hover,.malta-product-card:hover,.malta-category-tile:hover img{transform:none}}
