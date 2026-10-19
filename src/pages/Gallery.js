@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ProductCard from '../components/ProductCard';
 import getImageUrl from '../utils/getImageUrl';
 
@@ -7,8 +7,6 @@ import getImageUrl from '../utils/getImageUrl';
  * Exibe todos os produtos disponíveis com opções de filtro
  */
 const Gallery = () => {
-  // Estado para armazenar os produtos
-  const [products, setProducts] = useState([]);
   // Estado para armazenar os filtros selecionados
   const [filters, setFilters] = useState({
     brand: 'all',
@@ -82,20 +80,12 @@ const Gallery = () => {
     }
   ];
 
-  // Filtrar produtos com base nos filtros selecionados
-  useEffect(() => {
-    let filteredProducts = [...productData];
-    
-    if (filters.brand !== 'all') {
-      filteredProducts = filteredProducts.filter(product => product.brand === filters.brand);
-    }
-    
-    if (filters.type !== 'all') {
-      filteredProducts = filteredProducts.filter(product => product.type === filters.type);
-    }
-    
-    setProducts(filteredProducts);
-  }, [filters]);
+  // Os dados são estáticos: o filtro pode ser calculado diretamente,
+  // sem estado derivado nem efeitos colaterais.
+  const products = productData.filter(product => (
+    (filters.brand === 'all' || product.brand === filters.brand) &&
+    (filters.type === 'all' || product.type === filters.type)
+  ));
 
   // Manipular mudanças nos filtros
   const handleFilterChange = (filterType, value) => {
