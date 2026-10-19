@@ -1,13 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ConceptImage from './ConceptImage';
 
-const ProductCard = ({ image, model, brand, type }) => (
-  <article className="malta-product-card">
-    <div className="malta-product-image"><img src={image} alt={`Armação ${model} — ${brand}`} loading="lazy"/><span className="malta-type-tag">{type}</span></div>
-    <div className="malta-product-info">
-      <p>{brand}</p><h3>{model}</h3>
-      <div className="malta-product-bottom"><span>Modelo ilustrativo</span><Link to="/contato" aria-label={`Ver informações de contato para o modelo ${model}`}>Saiba mais ↗</Link></div>
-    </div>
-  </article>
-);
-export default ProductCard;
+export default function ProductCard({ frame, model, brand, type }) {
+  return (
+    <article className="malta-product-card">
+      <div className="malta-product-image">
+        <ConceptImage frame={frame} label={`Imagem artística de óculos da coleção fictícia ${brand}, conceito ${model}`}/>
+        <span className="malta-type-tag">{type}</span>
+      </div>
+      <div className="malta-product-info">
+        <p>{brand} · coleção fictícia</p><h3>{model}</h3>
+        <div className="malta-product-bottom"><span>Arte conceitual gerada por IA</span><Link to="/sobre" aria-label={`Saiba sobre a origem fictícia do conceito ${model}`}>Sobre o projeto ↗</Link></div>
+      </div>
+    </article>
+  );
+}
