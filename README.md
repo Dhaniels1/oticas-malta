@@ -27,7 +27,7 @@ O componente `src/components/ConceptImage.js` recorta os quadros do único arqui
 
 ## Tecnologias
 
-React 18, React Router DOM 6, Tailwind CSS 3, Create React App (`react-scripts` 5), GitHub Actions e Netlify.
+React 18, React Router DOM 6, Tailwind CSS 3, Create React App (`react-scripts` 5) e GitHub Actions.
 
 ## Execução local
 
@@ -54,8 +54,7 @@ node --test tests/catalogo-ficticio.test.cjs
 
 ## Deploy
 
-- **Netlify:** `netlify.toml` define `npm run build`, pasta `build/`, `PUBLIC_URL=/` e fallback SPA.
-- **GitHub Pages:** o workflow `.github/workflows/build.yml` executa o build e publica a branch `gh-pages`. A navegação utiliza `/oticas-malta` como base quando não está na raiz do Netlify.
+- **GitHub Pages:** o workflow `.github/workflows/build.yml` executa o build e publica a branch `gh-pages`. A navegação utiliza `/oticas-malta` como base no GitHub Pages.
 
 Confirme o resultado de cada implantação antes de usar os links de demonstração. Repositório de código: https://github.com/Dhaniels1/oticas-malta.
 
