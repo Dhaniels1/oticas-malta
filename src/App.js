@@ -8,7 +8,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 
 // No GitHub Pages o site fica em /oticas-malta/.
-// No Netlify ele é servido na raiz /. Não dependa de PUBLIC_URL
+// Em hospedagem na raiz do domínio, o site usa /. Não dependa de PUBLIC_URL
 // para o basename: o CRA também o utiliza para assets do build.
 function getRouterBase() {
   const path = window.location.pathname;
