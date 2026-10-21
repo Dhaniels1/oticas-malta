@@ -1,7 +1,6 @@
 const { chromium } = require('playwright-core');
 
 const sites = [
-  ['Netlify', 'https://oticas-malta-demo.netlify.app/'],
   ['GitHub Pages', 'https://dhaniels1.github.io/oticas-malta/']
 ];
 
